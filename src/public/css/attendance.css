@@ -1,0 +1,57 @@
+.ul {
+    list-style: none;
+}
+
+.ul li {
+    float: right;
+}
+
+.attendance-table {
+    margin: 30px auto;
+    width: 70%;
+    text-align: center;
+}
+
+.attendance-table__inner {
+    width: 100%;
+}
+
+.attendance-table__row {
+    border-bottom: 1px solid #ddd;
+}
+
+.attendance-table__header {
+    padding: 12px;
+    width: 20%;
+    font-weight: bold;
+}
+
+.attendance-table__item {
+    padding: 12px;
+    width: 20%;
+}
+
+.header {
+    background: white;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 20px 15px;
+    max-width: 1230px;
+}
+
+.header-utilities {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
