@@ -14,7 +14,7 @@ class CreateTimestampsTable extends Migration
     public function up()
     {
         Schema::create('timestamps', function (Blueprint $table) {
-            $table->integer('id');
+            $table->bigIncrements('id');
             $table->timestamp('start_work');
             $table->timestamp('end_work');
             $table->timestamp('total_work');

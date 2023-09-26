@@ -12,7 +12,6 @@ class AttendanceController extends Controller
 {
     public function attendance()
     {
-        $attendance = $request->only(['start_work', 'end_work', 'total_work', 'total_rest', ])
         return view('attendance');
     }
 }

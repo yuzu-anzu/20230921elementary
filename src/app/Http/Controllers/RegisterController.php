@@ -9,16 +9,16 @@ use Carbon\Carbon;
 
 class RegisterController extends Controller
 {
-    public function attendance()
+    public function timestamp()
     {
-        return view('attendance')
+    $user = Auth::user(); 
     }
 
-    public function create(RegisterRequest $request)
+    public function index(Request $request)
     {
         $form = $request->all();
         Register::create($form);
-        return redirect('/');
+        return redirect('/index');
     }
 
     public function update(Request $request)
@@ -27,12 +27,6 @@ class RegisterController extends Controller
         unset($form['_token']);
         Register::find($request-id)-update($form);
         return redirect('/');
-    }
-
-    public function store(Request $request)
-    {
-        $timestamp =$request->only(['start_work', 'end_work', 'total_work', 'rest_start', 'rest_end', 'rest_time'])
-        timestamp::create($timestamp);
     }
 
 }
