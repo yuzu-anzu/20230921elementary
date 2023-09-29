@@ -12,7 +12,7 @@
 
   <div class="attendance__content">
     <div class="attendance__panel">
-      <form class="attendance__button" action='' method="post">
+      <form class="attendance__button" action='index' method="post">
         <button class="attendance__button-submit" type="submit" input type="time">勤務開始</button>
       </form>
       <form class="attendance__button">

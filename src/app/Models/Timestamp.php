@@ -13,7 +13,10 @@ class Timestamp extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-       'user_id', 'start_work', 'end_work', 'stamp_date',
+       'user_id',
+       'start_work',
+       'end_work',
+       'stamp_date',
     ];
 
     protected $guarded = [

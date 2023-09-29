@@ -9,12 +9,12 @@ use Carbon\Carbon;
 
 class RegisterController extends Controller
 {
-    public function timestamp()
+    public function register()
     {
-    $user = Auth::user(); 
+        return view('register');
     }
 
-    public function index(Request $request)
+    public function create(Request $request)
     {
         $form = $request->all();
         Register::create($form);
@@ -28,5 +28,4 @@ class RegisterController extends Controller
         Register::find($request-id)-update($form);
         return redirect('/');
     }
-
 }
