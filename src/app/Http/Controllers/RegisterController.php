@@ -16,8 +16,7 @@ class RegisterController extends Controller
 
     public function create(Request $request)
     {
-        $form = $request->all();
-        Register::create($form);
+        $form = $request->all(); 
         return redirect('/index');
     }
 
@@ -27,5 +26,15 @@ class RegisterController extends Controller
         unset($form['_token']);
         Register::find($request-id)-update($form);
         return redirect('/');
+    }
+
+    public function index()
+    {
+        $user = Auth::user();
+        $timestamp = Timestamp::create([
+            'user_id' => $user->id,
+            'start_work' => Carbon::now(),
+        ]);
+        return redirect('index');
     }
 }
