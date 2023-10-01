@@ -12,8 +12,9 @@ class AuthController extends Controller
         return view('index');
     }
 
-    public function register()
+    public function store()
     {
-        return view ('register');
+        //
     }
 }
+

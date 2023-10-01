@@ -12,6 +12,8 @@ class Timestamp extends Model
      *
      * @var array<int, string>
      */
+    use HasFactory;
+    
     protected $fillable = [
        'user_id',
        'start_work',

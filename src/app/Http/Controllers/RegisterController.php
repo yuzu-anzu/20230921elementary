@@ -15,9 +15,10 @@ class RegisterController extends Controller
     }
 
     public function create(Request $request)
-    {
-        $form = $request->all(); 
-        return redirect('/index');
+    {   
+        $form = $request->all();
+        Author::create($form);
+        return redirect('index');
     }
 
     public function update(Request $request)
@@ -30,11 +31,8 @@ class RegisterController extends Controller
 
     public function index()
     {
-        $user = Auth::user();
-        $timestamp = Timestamp::create([
-            'user_id' => $user->id,
-            'start_work' => Carbon::now(),
-        ]);
-        return redirect('index');
+        $authors = Author::all();
+        
+        return view('index', ['authors' => $authors]);
     }
 }
