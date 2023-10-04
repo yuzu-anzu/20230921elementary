@@ -13,18 +13,22 @@
   <div class="attendance__content">
     <div class="attendance__panel">
       <form class="attendance__button" action="/index" method="post">
+        @csrf
         <button class="attendance__button-submit" type="submit" input type="time">勤務開始</button>
       </form>
       <form class="attendance__button">
+        @csrf
         <button class="attendance__button-submit" type="submit" input type="time">勤務終了</button>
       </form>
   </div>
   <div class="rest__content">
       <div class="rest__panel">
           <form class="rest__button">
+            @csrf
               <button class="rest__button-submit" type="submit" input type="time">休憩開始</button>
           </form>
           <form class="rest__button">
+            @csrf
               <button class="rest__button-submit" type="submit" input type="time">休憩終了</button>
           </form>
       </div>
